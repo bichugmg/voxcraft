@@ -90,6 +90,9 @@ router.get("/new", (req, res) => {
   });
 
 router.get("/:room", (req, res) => {
-	res.render("room", { roomId: req.params.room });
+	console.log(req.params.room);
+	const c= req.params.room;
+	console.log(` c= ${c}`);
+	res.render('room', { roomId: req.params.room });
   });
 module.exports = router;

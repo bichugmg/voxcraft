@@ -8,11 +8,16 @@
     <script src="socket.io.js"></script>
     <script src="https://kit.fontawesome.com/c939d0e917.js"></script>
     <script src="https://unpkg.com/peerjs@1.3.1/dist/peerjs.min.js"></script>
-    <script>
-      const ROOM_ID = "<%= roomId %>";
+  <input type="hidden" value="{{roomId}}" id="roomId"/>
+   <script>
+      var c= document.getElementById('roomId').value;
+      const ROOM_ID = c;
+
+      alert(ROOM_ID);
     </script>
   </head>
   <body>
+    
     <div class="header">
       <div class="logo">
         <div class="header__back">
@@ -63,4 +68,5 @@
   </div>
   </body>
   <script src="/script.js"></script>
+   
 </html>
